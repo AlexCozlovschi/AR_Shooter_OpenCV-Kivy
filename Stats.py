@@ -2,7 +2,7 @@
 hp_player = 200
 Armor = 0
 armor_player = 0
-damge_plyer = 10
+damage_player = 10
 Bullet = 5
 T_Bullet = 60
 
@@ -13,6 +13,7 @@ x = 0
 y = 0
 posi = [0, 0, 0, 0]
 image = 0
+enemy_type = 1
 
 
 # Give HP
@@ -42,11 +43,13 @@ def reload():
 
 
 def Box(type):
-    global image
+    global image, enemy_type
     if type == "b'Boss'":
         image = 1
+        enemy_type = 3
     elif type == "b'Mob'":
         image = 2
+        enemy_type = 1
     elif type == "b'HPBox'":
         image = 3
         HPBox()
@@ -55,4 +58,4 @@ def Box(type):
         image = 4
         reload()
 
-# print(HP)
+
